@@ -1,0 +1,528 @@
+:root{
+    --purple1:#6C51A4;
+    --purple2: #564183;
+    --grey: #292929;
+    --background: #141414;
+}
+
+*{
+    font-family: 'Assistant', sans-serif;
+    padding: 0; margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    border: 0;
+    outline: 0;
+}
+
+*::selection{
+    background-color: var(--purple1);
+    color: white;
+}
+
+html{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+    width: 10px;
+}
+
+html::-webkit-scrollbar-track{
+    background-color: var(--grey);
+}
+
+html::-webkit-scrollbar-thumb{
+    background-color: var(--purple1);
+}
+
+body{
+    padding-left: 275px;
+    overflow-x: hidden;
+}
+
+section{
+    min-height: 100vh;
+    padding: 0px 50px;
+    color: white;
+}
+
+.heading{
+    font-size: 50px;
+    padding: 10px;
+    border-bottom: .1rem solid #C2C2C2;
+    text-align: center;
+}
+
+.heading span{
+    color: var(--purple1);
+}
+
+/* Header Starts */
+
+header{
+    position: fixed;
+    background-color: var(--grey);
+    color: white;
+    top: 0; left: 0;
+    width: 275px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 1000;
+}
+
+header .user img{
+    width: 150px;
+    height: 150px;
+    margin-bottom: 7.5px;
+    border-radius: 50%;
+    border: 5px solid var(--purple1);
+}
+
+header .user .name{
+    font-size: 25px;
+}
+
+header .user .post{
+    font-size: 15px;
+}
+
+header .icons i{
+    font-size: 15px;
+    background-color: white;
+    color: var(--purple1);
+    width: 30px;
+    height: 30px;
+    padding: 7.5px;
+    margin: 10px 2.5px;
+    border-radius: 50%;
+}
+
+header .icons i:hover{
+    background-color: #C2C2C2;
+}
+
+header .navbar ul a{
+    font-size: 15px;
+    background-color: #414141;
+    color: white;
+    width: 150px;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    display: block;
+    text-align: left;
+}
+
+header .navbar ul a i{
+    color: var(--purple1);
+    width: 25px;
+    padding-right: 10px;
+    display: inline-block;
+    text-align: center;
+}
+
+header .navbar ul a:hover, header .navbar ul a i:hover{
+    background-color: var(--purple2);
+    color: white;
+}
+
+#menu{
+    position: fixed;
+    font-size: 15px;
+    background-color: var(--grey);
+    color: white;
+    top: 10px; right: 10px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.btn{
+    font-size: 15px;
+    font-weight: bold;
+    background: var(--purple1);
+    color: white;
+    padding: 10px;
+    margin: 10px 0px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn i{
+    color: white;
+    padding-right: 10px;
+}
+
+.btn:hover, .btn i:hover{
+    background-color: var(--purple2);
+}
+
+/* Header Ends */
+/* Section Home Starts */
+
+.inicio{
+    background-color:white;
+    color: var(--background);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.inicio h3{
+    font-size: 50px;
+}
+
+.inicio h1{
+    font-size: 75px;
+}
+
+.inicio p{
+    font-size: 25px;
+}
+
+/* Section Home Ends */
+/* Section SobreMi Starts */
+
+.sobre-mi{
+    background-color: var(--background);
+}
+
+.box-sobre-mi{
+    padding: 0px 50px;
+}
+
+.sobre-mi h2{
+    margin: 10px 0px;
+    font-size: 25px;
+    color: var(--purple1);
+    text-align: center;
+}
+
+.sobre-mi .info-aboutme p{
+    font-size: 20px;
+    text-align: left;
+}
+
+.sobre-mi .info-aboutme p span{
+    font-weight: bold;
+    color: var(--purple1);
+}
+
+.teach{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.teach .teach-div{   
+    width: 277.5px;
+    margin-bottom: 10px;
+    border: 1px solid #C2C2C2;
+    box-shadow: 2.5px 2.5px 2px 1px rgba(0, 0, 0, 0.25);
+}
+
+.teach .teach-div .row-teach{
+    display: flex;
+    background-color: white;  
+    height: 68.75px;
+}
+
+.teach .teach-div .tech-title{
+    font-size: 17.5px;
+    font-weight: bold;
+    background-color: var(--purple1);
+    padding: 5px;
+    text-align: center;
+}
+
+.tech-tools img{
+    width: 68.75px;
+    height: 68.75px;
+    padding: 5px;
+}
+
+.tech-tools span{
+    position: absolute;
+    font-size: 15px;
+    background-color: black;
+    padding: 5px 0.5px;
+    margin-top: -15px;
+    border-radius: 10px;
+    text-align: center;
+    justify-content: center;
+    display: none;
+}
+
+.tech-tools:hover span{
+    position: relative;
+    display: flex;
+}
+
+.tech-tools span::before{
+    content: "";
+    position: absolute;
+    top: -20px;
+    width: 1px;
+    height: 1px;
+    border-top: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid black;
+}
+
+/* Section SobreMi Ends */
+/* Section Educación and Experiencia Starts */
+
+.educacion{
+    background-color: white;
+    color: var(--background);
+}
+
+.experiencia{
+    background-color: var(--background);
+}
+
+.box-container{
+    padding: 0px 50px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.box-container .box{
+    position: relative;
+    padding: 7.5px 0px 7.5px 25px;
+    margin: 10px 0px;
+    width: 400px;
+    border-left: 2.5px solid #C2C2C2;
+}
+
+.box-container .box span{
+    font-size: 20px;
+    font-weight: bold;
+    background-color: var(--grey);
+    color: white;
+    padding: 2.5px 5px;
+    border-radius: 10px;
+}
+
+.box-container .box h3{
+    font-size: 25px;
+    color: var(--purple1);
+    padding-top: 7.5px;
+}
+
+.box-container .box p{
+    font-size: 15px;
+}
+
+.box-container .box i{
+    position: absolute;
+    font-size: 20px;
+    background-color: var(--purple1);
+    color: white;
+    top:0px; left: -20px;
+    padding-top: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+/* Section Educación and Experiencia Ends */
+/* Section Portafolio Starts */
+
+.portafolio{
+    background-color: white;
+    color: var(--background);
+}
+
+.box-portafolio{
+    padding: 0px 50px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.portafolio .box-portafolio .box-portafolio-photos{
+    position: relative;
+    margin-top: 10px;
+    box-shadow: 2.5px 2.5px 2px 1px rgba(0, 0, 0, 0.25);
+    width: 275px;
+    height: 175px;
+}
+
+.portafolio .box-portafolio .box-portafolio-photos img{
+    width: 100%;
+    height: 100%;
+}
+
+.portafolio .box-portafolio .box-portafolio-photos .cape{
+    position: absolute;
+    background-color: var(--grey);
+    top: 0px; left: 0px;
+    width: 275px;
+    height: 175px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+.portafolio .box-portafolio .box-portafolio-photos .cape h3{
+    font-size: 25px;
+    color: var(--purple1);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.portafolio .box-portafolio .box-portafolio-photos .cape p{
+    font-size: 15px;
+    color: white;
+    text-align: center;
+}
+
+.portafolio .box-portafolio .box-portafolio-photos .cape:hover{
+    opacity: 1;
+}
+
+/* Section Portafolio Ends */
+/* Section Contacto Starts */
+
+.contacto{
+    background-color: var(--background);
+}
+
+.contacto .title{
+    font-size: 25px;
+    color: var(--purple1);
+    margin: 10px 0px;
+}
+
+.contacto > div{
+    padding: 0px 50px;
+}
+
+.contacto .row-contact{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: initial;
+    justify-content: space-evenly;
+}
+
+.contacto .row-contact > div{
+    width: 400px;
+}
+
+.contacto .row-contact .box-contact > p{
+    font-size: 15x;
+    color: white;
+}
+
+.contacto .box-contact-infos{
+    display: flex;
+    padding-top: 25px;
+}
+
+.contacto .box-contact-infos i{
+    font-size: 25px;
+    color: var(--purple1);
+    padding-top: 5px;
+    padding-right: 10px;
+}
+
+.contacto .box-contact-infos .info h3{
+    font-size: 25px;
+    color:white;
+}
+
+.contacto .box-contact-infos .info p{
+    font-size: 15px;
+    color:white;
+}
+
+.contacto .box-contact .share i{
+    font-size: 15px;
+    background-color: white;
+    color: var(--purple1);
+    width: 30px;
+    height: 30px;
+    padding: 7.5px;
+    margin: 25px 2.5px;
+    border-radius: 50%;
+}
+
+.contacto .box-contact .share i:hover{
+    background-color: #C2C2C2;
+}
+
+.contacto .form .input-box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contacto .form .input-box input{
+    width: 195px;
+    height: 35px;
+    padding: 15px 10px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+.contacto .form textarea{
+    width: 400px;
+    height: 200px;
+    padding: 7.5px 10px;
+    border-radius: 10px;
+} 
+
+/* Section Contacto Ends */
+/* Media Queries */
+
+@media (max-width:1325px) and (min-width:390px){
+
+    header{
+        display: none;
+    }
+  
+    body{
+        padding-left: 0px;
+    }
+
+    .sobre-mi, .educacion, .experiencia, .portafolio, .contacto{
+        padding: 0px;
+    }
+
+}
+
+@media (max-width:390px){
+
+    .contacto .form .input-box{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contacto .form .input-box input{
+        width: 290px;
+    }
+    
+    .contacto .form textarea{
+        width: 290px;
+    }
+
+}
